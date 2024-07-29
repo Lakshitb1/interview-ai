@@ -2,11 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    135deg,
-    #434343,
-    #000000
-  ); /* Black to grey gradient */
+  background: linear-gradient(135deg, #434343, #000000); /* Black to grey gradient */
   color: #fff; /* White text for contrast */
   min-height: 100vh;
   padding: 20px;
@@ -80,6 +76,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   height: 8vh;
+  
 }
 
 .get-started-button:hover {
@@ -108,8 +105,7 @@
     font-size: 24px; /* Adjust font size for smaller screens */
   }
 
-  .section p,
-  .target-audience li {
+  .section p, .target-audience li {
     font-size: 16px; /* Adjust font size for smaller screens */
   }
 

@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './HomePage.css';
 
 const HomePage = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleGetStartedClick = () => {
+    navigate('/profile'); // Navigate to the profile page
+  };
+
   return (
     <div className="home-container">
       <header className="home-header">
@@ -31,7 +38,7 @@ const HomePage = () => {
         </div>
       </div>
       <footer className="home-footer">
-        <button className="get-started-button">Get Started</button>
+        <button className="get-started-button" onClick={handleGetStartedClick}>Get Started</button>
       </footer>
     </div>
   );
