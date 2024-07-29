@@ -1,21 +1,32 @@
-/* Add styles specific to InterviewPage here */
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  .main-content {
-    display: flex;
-    flex: 1;
-    background-color: #383737;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Include styles from Navbar.css, Sidebar.css, QuestionSection.css */
-  @import '../components/Navbar.css';
-  @import '../components/Sidebar.css';
-  @import '../components/QuestionSection.css';
-  
+.interview-page {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+}
+
+.question-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #2e2e2e; /* Match the dark gray background */
+}
+
+.question-section h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.question-section p {
+  font-size: 18px;
+  color: #dcdcdc; /* Light gray text for readability */
+}
+
+/* Add a blue border to separate sections if needed */
+.sidebar, .question-section {
+  border-bottom: 2px solid #007bff;
+}

@@ -1,93 +1,90 @@
+/* QuestionSection.css */
 .question-section {
-    flex: 1;
-    padding: 20px;
-    background: linear-gradient(135deg, #333, #000); /* Dark gradient to match the navbar */
-    border-radius: 8px;
-    /*margin-left: 20px;
-    color: #ddd; /* Light text color for consistency */
-  }
-  
-  .question-section h2 {
-    font-size: 24px;
-    color: #ddd; /* Light color to contrast with the dark background */
-  }
-  
-  .question-section p {
-    font-size: 18px;
-    color: #bbb; /* Slightly lighter color for text */
-    margin-bottom: 20px;
-  }
-  
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(135deg, #333, #000);
+}
+
+.question-section h2 {
+  font-size: 24px;
+  color: #ddd;
+}
+
+.question-section p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.interview-pictures {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.interview-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeholder {
+  width: 500px;
+  height: 400px;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #555;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.back-button, .next-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover, .next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles for QuestionSection */
+@media (max-width: 768px) {
   .interview-pictures {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .interview-picture {
-    display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  
+
   .placeholder {
-    width: 500px;
-    height: 400px;
-    background-color: #444; /* Darker background to match theme */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #555; /* Slightly lighter border */
-    border-radius: 8px;
-    font-size: 18px;
-    color: #ddd; /* Light text color */
-    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
   }
-  
+
   .back-button, .next-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff; /* Blue color to match the navbar */
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
   }
-  
-  .back-button:hover, .next-button:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+@media (max-width: 480px) {
+  .placeholder {
+    width: 100%;
+    max-width: 200px;
   }
-  
-  /* Responsive Styles for QuestionSection */
-  @media (max-width: 768px) {
-    .interview-pictures {
-      flex-direction: column;
-    }
-  
-    .placeholder {
-      width: 100%;
-      max-width: 400px;
-      max-height: 400px;
-    }
-  
-    .back-button, .next-button {
-      width: 100%;
-      max-width: 200px;
-      margin: 10px 0;
-    }
+
+  .back-button, .next-button {
+    width: 100%;
+    max-width: 150px;
+    margin: 5px 0;
   }
-  
-  @media (max-width: 480px) {
-    .placeholder {
-      width: 100%;
-      max-width: 200px;
-    }
-  
-    .back-button, .next-button {
-      width: 100%;
-      max-width: 150px;
-      margin: 5px 0;
-    }
-  }
-  
+}

@@ -12,10 +12,9 @@ body {
 }
 
 .main-content {
-  display: flex;
-  flex: 1;
-  background-color: #fff;
-  margin: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+    display: flex;
+    flex: 1;
+    background-color: #2e2e2e; /* Dark grey background to match body */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove paddings */
+  }
