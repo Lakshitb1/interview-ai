@@ -1,0 +1,63 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and profile icon */
+    align-items: center;
+    width: calc(100% - 300px * 2); /* Adjust width based on padding */
+    padding: 15px 300px; /* Padding of 300px on left and right */
+    background: linear-gradient(135deg, #000000, #434343); /* Black gradient */
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the navbar within the viewport */
+  }
+  
+  .logo {
+    width: 120px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between; /* Space links evenly within the navbar */
+    flex: 1;
+  }
+  
+  .nav-links a {
+    margin: 0 20px; /* Space between links */
+    text-decoration: none;
+    color: #fff; /* Change text color to contrast with the dark background */
+    font-weight: 500;
+    transition: color 0.3s;
+    text-align: center;
+  }
+  
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  
+  .profile-icon {
+    width: 50px;
+  }
+  
+  .profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+  }
+  
+  /* Responsive Styles for Navbar */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px; /* Adjust padding for mobile */
+      width: 100%;
+      margin: 0; /* Remove margin on mobile */
+    }
+  
+    .nav-links {
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 10px; /* Adjust margin for better spacing on mobile */
+    }
+  }
+  

@@ -1,0 +1,21 @@
+/* Add styles specific to InterviewPage here */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    background-color: #383737;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Include styles from Navbar.css, Sidebar.css, QuestionSection.css */
+  @import '../components/Navbar.css';
+  @import '../components/Sidebar.css';
+  @import '../components/QuestionSection.css';
+  

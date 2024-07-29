@@ -1,0 +1,61 @@
+.sidebar {
+    width: 200px;
+    padding: 20px;
+    background: linear-gradient(135deg, #333, #000); /* Dark gradient for consistency */
+    border-right: 1px solid #444; /* Darker border color */
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .back-link {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #007bff; /* Blue color to match the navbar hover effect */
+    font-weight: 700;
+  }
+  
+  .progress {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007bff; /* Light color for text consistency */
+    font-weight: 700;
+  }
+  
+  .question-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .question-list li {
+    margin: 10px 0;
+  }
+  
+  .question-list button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #444; /* Darker background for buttons */
+    border: 1px solid #555; /* Slightly lighter border for visibility */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: #ddd; /* Light color for text */
+    font-weight: 700;
+  }
+  
+  .question-list button:hover {
+    background-color: #555; /* Lighter background on hover */
+    border-color: #666; /* Lighter border on hover */
+  }
+  
+  /* Responsive Styles for Sidebar */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #444; /* Consistent border color for mobile */
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  
