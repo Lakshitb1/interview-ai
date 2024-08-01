@@ -16,19 +16,41 @@ const questions = [
   "Do you have any questions for me about the company or the role?"
 ];
 
+const interviewerVideos = [
+  "/videos/1.mp4",
+  "/videos/2.mp4",
+  "/videos/3.mp4",
+  "/videos/4.mp4",
+  "/videos/5.mp4",
+  "/videos/6.mp4",
+  "/videos/7.mp4",
+  "/videos/8.mp4",
+  "/videos/9.mp4",
+  "/videos/10.mp4"
+];
+
 const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [recordedChunks, setRecordedChunks] = useState([]);
   const [recordingCompleted, setRecordingCompleted] = useState(false);
   const webcamRef = useRef(null);
   const mediaRecorderRef = useRef(null);
-  const navigate = useNavigate(); 
+  const interviewerVideoRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!isRecording && recordedChunks.length > 0) {
       saveRecording();
     }
   }, [isRecording]);
+
+  useEffect(() => {
+    if (interviewerVideoRef.current) {
+      interviewerVideoRef.current.src = interviewerVideos[currentQuestionIndex];
+      interviewerVideoRef.current.load();
+      interviewerVideoRef.current.play().catch(e => console.error("Video playback failed:", e));
+    }
+  }, [currentQuestionIndex]);
 
   const handleStartRecording = () => {
     mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
@@ -40,9 +62,8 @@ const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   };
 
   const handleViewReport = () => {
-    navigate('/dashboard'); // Redirect to the dashboard using useNavigate
+    navigate('/dashboard');
   };
-
 
   const handleStopRecording = () => {
     mediaRecorderRef.current.stop();
@@ -57,12 +78,12 @@ const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
   };
 
   const saveRecording = () => {
-    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+    const blob = new Blob(recordedChunks, { type: 'video/mp4' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.style.display = 'none';
     a.href = url;
-    a.download = 'interview_recording.webm';
+    a.download = 'interview_recording.mp4';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
@@ -85,11 +106,7 @@ const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
     } else if (isRecording && currentQuestionIndex === questions.length - 1) {
       handleStopRecording();
     } else if (recordingCompleted) {
-      // Implement view report functionality here
       navigate('/scores');
-    //  <button className="view-report-button" onClick={handleViewReport}>
-    //           View Report
-    //         </button>
     }
   };
 
@@ -107,49 +124,29 @@ const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
       <p>{questions[currentQuestionIndex]}</p>
       <div className="interview-pictures">
         <div className="interview-picture">
-          <div className="placeholder">Interviewer</div>
-          <button className="back-button" onClick={handlePreviousQuestion} disabled={!isRecording || currentQuestionIndex === 0}>Back</button>
+          <video 
+            ref={interviewerVideoRef}
+            className="interviewer-video"
+            width="75%"
+            height="auto"
+            autoPlay
+          >
+            <source src={interviewerVideos[currentQuestionIndex]} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="interview-picture">
           <Webcam audio={true} ref={webcamRef} className="webcam"/>
-          <button className="start-next-stop-button" onClick={handleButtonClick}>
-            {getButtonText()}
-          </button>
         </div>
+      </div>
+      <div className="controls">
+        <button className="back-button" onClick={handlePreviousQuestion} disabled={!isRecording || currentQuestionIndex === 0}>Back</button>
+        <button className="start-next-stop-button" onClick={handleButtonClick}>
+          {getButtonText()}
+        </button>
       </div>
     </section>
   );
 };
 
 export default QuestionSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-const questions = [
-  "Thanks for coming in, Let's start with your introduction first.",
-  "What are your greatest strengths?",
-  "What do you consider to be your weaknesses?",
-  "Why do you want to work for our company?",
-  "Where do you see yourself in five years?",
-  "Tell me about a challenge you've faced at work, and how you dealt with it.",
-  "How do you handle stress and pressure?",
-  "Describe a time when you had to work as part of a team.",
-  "What motivates you?",
-  "Do you have any questions for me about the company or the role?"
-];
-
-*/

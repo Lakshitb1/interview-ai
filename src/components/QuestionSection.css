@@ -29,6 +29,12 @@
 	align-items: center;
 }
 
+.interviewer-video,
+.webcam {
+	width:65%; 
+	height: auto;
+}
+
 .placeholder,
 .webcam {
 	width: 500px;
