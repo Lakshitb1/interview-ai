@@ -6,6 +6,42 @@
   border-right: 2px solid #007bff; /* Blue line on the right side */
 }
 
+.sidebar button {
+  background-color: #dddddd;
+  color: #333333;
+}
+
+/* Main content area styles */
+.question-section {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Button styles */
+.back-button, .next-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Interview picture placeholders */
+.interview-picture .placeholder {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.sidebar button:hover {
+  background-color: #cccccc;
+}
+
+.sidebar button.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
 .back-link {
   display: block;
   margin-bottom: 20px;
