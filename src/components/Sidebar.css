@@ -1,4 +1,8 @@
 /* Sidebar.css */
+p{
+  color: rgb(192, 192, 192) !important;
+}
+
 .sidebar {
   width: 200px;
   padding: 20px;

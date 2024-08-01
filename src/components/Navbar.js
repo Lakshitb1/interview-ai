@@ -5,12 +5,13 @@ import './Navbar.css'; // Create this CSS file for navbar-specific styles
 const Navbar = () => {
   return (
     <header className="navbar">
-      <img src="logo.png" alt="Logo" className="logo" />
+      {/* <img src="logo.png" alt="Logo" className="logo" /> */}
       <nav className="nav-links">
+        <Link to="/" style={{fontWeight: 'bold', fontSize: 25, color: 'gray'}}> Logo </Link>
         <Link to="/">Home</Link>
-        <Link to="/dashboard">My Dashboard</Link>
+        <Link to="/dashboard">Dashboard</Link>
         <Link to="/interviews">Interviews</Link>
-        <Link to="/about">About Us</Link>
+        <Link to="/about">About</Link>
         <Link to="/faqs">FAQs</Link>
       </nav>
       <div className="profile-icon">

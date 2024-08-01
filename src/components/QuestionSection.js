@@ -140,7 +140,7 @@ const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
         </div>
       </div>
       <div className="controls">
-        <button className="back-button" onClick={handlePreviousQuestion} disabled={!isRecording || currentQuestionIndex === 0}>Back</button>
+        {/* <button className="back-button" onClick={handlePreviousQuestion} disabled={!isRecording || currentQuestionIndex === 0}>Back</button> */}
         <button className="start-next-stop-button" onClick={handleButtonClick}>
           {getButtonText()}
         </button>
