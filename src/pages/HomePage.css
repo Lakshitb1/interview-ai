@@ -1,0 +1,115 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #434343, #000000); /* Black to grey gradient */
+  color: #fff; /* White text for contrast */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row; /* Arrange sections horizontally */
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.section {
+  flex: 1;
+  margin: 0 10px;
+  background-color: #3a3a3a; /* Slightly lighter dark gray */
+  border: 1px solid #007bff; /* Blue border for separation */
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.section:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+.section h2 {
+  font-size: 28px;
+  color: #007bff; /* Blue heading for emphasis */
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #dcdcdc; /* Light gray text for readability */
+}
+
+.target-audience ul {
+  list-style: none;
+  padding: 0;
+}
+
+.target-audience li {
+  font-size: 18px;
+  color: #dcdcdc; /* Light gray text */
+  margin-bottom: 10px;
+}
+
+.home-footer {
+  margin-top: 40px;
+}
+
+.get-started-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 8vh;
+  
+}
+
+.get-started-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    align-items: center;
+  }
+
+  .section {
+    margin: 10px 0;
+    width: 90%; /* Adjust width to fit smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-header h1 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+  }
+
+  .section h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .section p, .target-audience li {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .get-started-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}

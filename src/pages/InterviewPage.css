@@ -1,0 +1,32 @@
+.interview-page {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+}
+
+.question-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #2e2e2e; /* Match the dark gray background */
+}
+
+.question-section h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.question-section p {
+  font-size: 18px;
+  color: #dcdcdc; /* Light gray text for readability */
+}
+
+/* Add a blue border to separate sections if needed */
+.sidebar, .question-section {
+  border-bottom: 2px solid #007bff;
+}

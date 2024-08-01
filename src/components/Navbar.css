@@ -1,0 +1,62 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  
+  align-items: right;
+  padding: 15px 475px;
+  background: linear-gradient(135deg, #333, #000);
+  border-bottom: 2px solid #007bff; /* Blue line at the bottom */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.nav-links a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+.profile-icon {
+  width: 50px;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+}
+
+/* Responsive Styles for Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+}

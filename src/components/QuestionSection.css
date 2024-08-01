@@ -1,0 +1,120 @@
+/* QuestionSection.css */
+.question-section {
+	flex: 1;
+	padding: 20px;
+	background: linear-gradient(135deg, #333, #000);
+}
+
+.question-section h2 {
+	font-size: 24px;
+	color: #ddd;
+}
+
+.question-section p {
+	font-size: 18px;
+	color: #ddd;
+	margin-bottom: 20px;
+}
+
+.interview-pictures {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.interview-picture {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.placeholder,
+.webcam {
+	width: 500px;
+	height: 400px;
+	background-color: #444;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px dashed #555;
+	border-radius: 8px;
+	font-size: 18px;
+	color: #ddd;
+	margin-bottom: 15px;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.back-button {
+	background-color: #ffc107;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.start-next-stop-button {
+	background-color: #007bff;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+.next-button {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.back-button:hover {
+	background-color: #e0a800;
+}
+
+.start-next-stop-button:hover {
+	background-color: #0056b3;
+}
+
+.next-button:hover {
+	background-color: #0056b3;
+}
+
+/* Responsive Styles for QuestionSection */
+@media (max-width: 768px) {
+	.interview-pictures {
+		flex-direction: column;
+	}
+
+	.placeholder,
+	.webcam {
+		width: 100%;
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	.back-button,
+	.next-button,
+	.start-next-stop-button {
+		width: 100%;
+		max-width: 200px;
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.placeholder,
+	.webcam {
+		width: 100%;
+		max-width: 200px;
+	}
+
+	.back-button,
+	.next-button,
+	.start-next-stop-button {
+		width: 100%;
+		max-width: 150px;
+		margin: 5px 0;
+	}
+}
