@@ -86,9 +86,10 @@ const QuestionSection = ({ currentQuestionIndex, setCurrentQuestionIndex }) => {
       handleStopRecording();
     } else if (recordingCompleted) {
       // Implement view report functionality here
-     <button className="view-report-button" onClick={handleViewReport}>
-              View Report
-            </button>
+      navigate('/scores');
+    //  <button className="view-report-button" onClick={handleViewReport}>
+    //           View Report
+    //         </button>
     }
   };
 

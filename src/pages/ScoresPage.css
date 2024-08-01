@@ -1,0 +1,53 @@
+.scores-page {
+  background: linear-gradient(135deg, #333, #000);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.scores-title {
+  color: white !important;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.scores-container {
+  display: flex;
+  gap: 20px;
+}
+
+.score-card {
+  background: linear-gradient(135deg, #333, #000);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+  border: 2px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.score-text {
+  font-size: 2rem;
+  color: #fafafa;
+  font-weight: bold;
+}
+
+.score-label {
+  color: white;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+

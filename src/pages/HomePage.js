@@ -6,7 +6,7 @@ const HomePage = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleGetStartedClick = () => {
-    navigate('/profile'); // Navigate to the profile page
+    navigate('/interviews'); // Navigate to the profile page
   };
 
   return (
